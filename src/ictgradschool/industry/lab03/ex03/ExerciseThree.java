@@ -1,5 +1,7 @@
 package ictgradschool.industry.lab03.ex03;
 
+import ictgradschool.Keyboard;
+
 /**
  * Write a program that prompts the user to enter a sentence, then prints out the sentence with a random character
  * missing. The program is to be written so that each task is in a separate method. See the comments below for the
@@ -27,7 +29,8 @@ public class ExerciseThree {
     private String getSentenceFromUser() {
 
         // TODO Prompt the user to enter a sentence, then get their input.
-        return null;
+        System.out.print("Enter a sentence: ");
+        return Keyboard.readInput();
     }
 
     /**
@@ -36,7 +39,9 @@ public class ExerciseThree {
     private int getRandomPosition(String sentence) {
 
         // TODO Use a combination of Math.random() and sentence.length() to get the desired result.
-        return -1;
+        int length = sentence.length();
+        int randomPosition = (int)(Math.random()*length);
+        return randomPosition;
     }
 
     /**
@@ -45,6 +50,8 @@ public class ExerciseThree {
     private void printCharacterToBeRemoved(String sentence, int position) {
 
         // TODO Implement this method
+        char removedChar = sentence.charAt(position);
+        System.out.println("Removing \""+ removedChar+ "\" from position " + (position+1));
 
     }
 
@@ -54,8 +61,13 @@ public class ExerciseThree {
     private String removeCharacter(String sentence, int position) {
 
         // TODO Implement this method
-        return null;
-
+        String changedSentence;
+        if (position == 0){
+            changedSentence = sentence.substring(position+1);
+        }else {
+            changedSentence = sentence.substring(0, position) + sentence.substring(position+1);
+        }
+        return changedSentence;
     }
 
     /**
@@ -64,6 +76,8 @@ public class ExerciseThree {
     private void printNewSentence(String changedSentence) {
 
         // TODO Implement this method
+        System.out.println("New sentence is:" + changedSentence);
+
     }
 
     public static void main(String[] args) {

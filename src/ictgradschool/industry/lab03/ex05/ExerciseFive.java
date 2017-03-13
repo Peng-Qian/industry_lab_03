@@ -22,21 +22,23 @@ public class ExerciseFive {
         String leftDiagonal = getLeftDiagonal(row1, row2, row3);
 
         printDiagonal(leftDiagonal);
+
     }
 
     /**
      * TODO Implement this
      */
     public String getRow(String letters, int row) {
-
-        return null;
+        return letters.substring(6*(row-1),6*row);
     }
 
     /**
      * TODO Implement this
      */
     public void printRows(String row1, String row2, String row3) {
-
+        System.out.println(row1);
+        System.out.println(row2);
+        System.out.println(row3);
     }
 
     /**
@@ -44,14 +46,14 @@ public class ExerciseFive {
      */
     public String getLeftDiagonal(String row1, String row2, String row3) {
 
-        return null;
+        return (row1.substring(0,2)+row2.substring(2,4)+row3.substring(4,5));
     }
 
     /**
      * TODO Implement this
      */
     public void printDiagonal(String leftDiagonal) {
-
+        System.out.println("Diagonal: "+leftDiagonal);
     }
 
     /**
