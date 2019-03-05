@@ -14,7 +14,7 @@ public class ExerciseTwo {
      * TODO Your code here. You may also write additional methods if you like.
      */
     private void start() {
-        System.out.print("Lower bound?");
+        System.out.print("Lower bound?"+Math.random());
         int lowerBound = Integer.parseInt(getValueFromUser());
 
         System.out.print("Upper bound?");
